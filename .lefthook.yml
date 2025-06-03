@@ -1,0 +1,27 @@
+---
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: uv-lock
+      glob: "{pyproject.toml,uv.lock}"
+      group:
+        piped: true
+        jobs:
+          - run: uv lock
+          - run: git add uv.lock
+
+pre-push:
+  parallel: true
+  jobs:
+    - name: uv-lock-frozen
+      glob: "{pyproject.toml,uv.lock}"
+      group:
+        piped: true
+        jobs:
+          - run: uv lock --frozen
+          - run: git add uv.lock
