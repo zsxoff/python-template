@@ -16,7 +16,6 @@ pre-commit:
           - run: git add uv.lock
 
 pre-push:
-  parallel: true
   jobs:
     - name: uv-lock-frozen
       glob: "{pyproject.toml,uv.lock}"
