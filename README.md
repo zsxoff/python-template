@@ -24,6 +24,10 @@ sudo pacman -S taplo
 
 - [Lefthook](https://github.com/evilmartians/lefthook) - A Git hooks manager for Node.js, Ruby, Python and many other types of projects
 
+## Python
+
+- [Bandit](https://github.com/PyCQA/bandit) - Bandit is a tool designed to find common security issues in Python code
+
 ## Tools configuration
 
 - [EditorConfig](https://editorconfig.org/) - Maintains consistent coding styles across editors and IDEs
