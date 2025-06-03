@@ -22,9 +22,9 @@ sudo pacman -S taplo
 
 ## Git hooks
 
-- [lefthook](https://github.com/evilmartians/lefthook) - A Git hooks manager for Node.js, Ruby, Python and many other types of projects
+- [Lefthook](https://github.com/evilmartians/lefthook) - A Git hooks manager for Node.js, Ruby, Python and many other types of projects
 
 ## Tools configuration
 
 - [EditorConfig](https://editorconfig.org/) - Maintains consistent coding styles across editors and IDEs
-- [taplo](https://github.com/tamasfe/taplo) - A TOML toolkit written in Rust. In this template, it is used for `pyproject.toml`
+- [Taplo](https://github.com/tamasfe/taplo) - A TOML toolkit written in Rust. In this template, it is used for `pyproject.toml`
