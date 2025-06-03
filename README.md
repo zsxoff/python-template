@@ -26,4 +26,5 @@ sudo pacman -S taplo
 
 ## Tools configuration
 
+- [EditorConfig](https://editorconfig.org/) - Maintains consistent coding styles across editors and IDEs
 - [taplo](https://github.com/tamasfe/taplo) - A TOML toolkit written in Rust. In this template, it is used for `pyproject.toml`
