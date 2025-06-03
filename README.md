@@ -7,13 +7,13 @@ A typical template for Python projects. Has pretty strict linter settings.
 macOS:
 
 ```bash
-brew install taplo
+brew install uv taplo
 ```
 
 Arch Linux:
 
 ```bash
-sudo pacman -S taplo
+sudo pacman -S uv taplo
 ```
 
 ## Git configuration
