@@ -13,7 +13,7 @@ brew install uv taplo
 Arch Linux:
 
 ```bash
-sudo pacman -S uv taplo
+sudo pacman -S --needed uv taplo
 ```
 
 ## Git configuration
