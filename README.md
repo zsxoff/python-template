@@ -24,7 +24,7 @@ sudo pacman -S --needed uv taplo
 
 - [Lefthook](https://github.com/evilmartians/lefthook) - A Git hooks manager for Node.js, Ruby, Python and many other types of projects
 
-## Python
+## Linters and Formatters
 
 - [Pyright](https://github.com/microsoft/pyright) - Static Type Checker for Python
 
