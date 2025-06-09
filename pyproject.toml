@@ -7,7 +7,7 @@ requires-python = ">=3.13"
 dependencies = []
 
 [dependency-groups]
-dev = ["bandit==1.8.3", "lefthook==1.11.13", "pyright==1.1.401"]
+dev = ["bandit==1.8.3", "lefthook==1.11.13", "pyright==1.1.401", "pytest==8.4.0", "pytest-sugar==1.0.0"]
 
 [tool.bandit]
 exclude_dirs = [
