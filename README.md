@@ -34,7 +34,7 @@ sudo pacman -S --needed uv taplo
 - [pytest](https://github.com/pytest-dev/pytest) - Simple powerful testing with Python
 - [pytest-sugar](https://pypi.org/project/pytest-sugar) - A plugin for pytest that changes the default look and feel of pytest
 
-## Tools configuration
+## External tools configuration
 
 - [EditorConfig](https://editorconfig.org/) - Maintains consistent coding styles across editors and IDEs
 - [Taplo](https://github.com/tamasfe/taplo) - A TOML toolkit written in Rust. In this template, it is used for `pyproject.toml`
