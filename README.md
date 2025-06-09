@@ -26,8 +26,11 @@ sudo pacman -S --needed uv taplo
 
 ## Python
 
-- [Bandit](https://github.com/PyCQA/bandit) - Bandit is a tool designed to find common security issues in Python code
 - [Pyright](https://github.com/microsoft/pyright) - Static Type Checker for Python
+
+## Security
+
+- [Bandit](https://github.com/PyCQA/bandit) - Bandit is a tool designed to find common security issues in Python code
 
 ## Testing
 
