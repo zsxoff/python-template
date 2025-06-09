@@ -7,7 +7,7 @@ requires-python = ">=3.13"
 dependencies = []
 
 [dependency-groups]
-dev = ["bandit==1.8.3", "lefthook==1.11.13"]
+dev = ["bandit==1.8.3", "lefthook==1.11.13", "pyright==1.1.401"]
 
 [tool.bandit]
 exclude_dirs = [
@@ -24,3 +24,12 @@ exclude_dirs = [
 
 [tool.bandit.assert_used]
 skips = ["*/*_test.py", "*/test_*.py", "./tests/conftest.py"]
+
+[tool.pyright]
+pythonVersion = "3.13"
+pythonPlatform = "Linux"
+exclude = [
+  "**/__pycache__",  # common env
+  "**/.*",           # common env
+  "**/node_modules", # common env
+]
