@@ -7,7 +7,14 @@ requires-python = ">=3.13"
 dependencies = []
 
 [dependency-groups]
-dev = ["bandit==1.8.3", "lefthook==1.11.13", "pyright==1.1.401", "pytest==8.4.0", "pytest-sugar==1.0.0"]
+dev = [
+  "bandit==1.8.3",
+  "lefthook==1.11.13",
+  "pyright==1.1.401",
+  "pytest==8.4.0",
+  "pytest-sugar==1.0.0",
+  "ruff==0.11.13",
+]
 
 [tool.bandit]
 exclude_dirs = [
@@ -33,3 +40,55 @@ exclude = [
   "**/.*",           # common env
   "**/node_modules", # common env
 ]
+
+[tool.ruff]
+preview = true
+fix = false
+target-version = "py313"
+line-length = 120
+extend-exclude = [
+  ".idea",         # common env
+  ".vscode",       # common env
+  ".zed",          # common env
+  ".pytest_cache", # tools
+  "docs",          # docs
+]
+
+[tool.ruff.format]
+quote-style = "double"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+  "F", # Pyflakes
+  "E", # pycodestyle - Error
+  "W", # pycodestyle - Warning
+]
+ignore = [
+  "ANN002", # Missing type annotation for *{name}
+  "ANN003", # Missing type annotation for **{name}
+]
+extend-select = [
+  "I", # isort
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = [
+  "S101", # Checks for uses of the assert keyword
+]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+lines-between-types = 0
+known-first-party = ["src"]
+known-third-party = []
+
+[tool.ruff.lint.mccabe]
+max-complexity = 6
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 120
+max-line-length = 120
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
