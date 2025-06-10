@@ -1,5 +1,9 @@
 # Python template
 
+> Currently in development, come back later...
+
+---
+
 A typical template for Python projects. Has pretty strict linter settings.
 
 ## Tools setup
