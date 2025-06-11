@@ -12,6 +12,10 @@
 - Copier template
 - SQL formatter
 - Security checks
+- Pylint
+- wemake-python-styleguide
+- Pyrefly
+- Code coverage
 
 ---
 
