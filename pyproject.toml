@@ -10,6 +10,7 @@ dependencies = []
 dev = [
   "bandit==1.8.3",
   "lefthook==1.11.13",
+  "mypy[faster-cache]==1.16.0",
   "pyright==1.1.402",
   "pytest==8.4.0",
   "pytest-sugar==1.0.0",
@@ -31,6 +32,30 @@ exclude_dirs = [
 
 [tool.bandit.assert_used]
 skips = ["*/*_test.py", "*/test_*.py", "./tests/conftest.py"]
+
+[tool.mypy]
+strict = true
+strict_bytes = true
+strict_equality = true
+python_version = "3.13"
+platform = "linux"
+local_partial_types = true
+warn_unreachable = true
+exclude = [
+  "^.git/",          # common env
+  "^.idea/",         # common env
+  "^.venv/",         # common env
+  "^.vscode/",       # common env
+  "^.zed/",          # common env
+  "^.mypy_cache/",   # tools
+  "^.pytest_cache/", # tools
+  "^.ruff_cache/",   # tools
+  "^docs/",          # docs
+]
+disable_error_code = [
+  "no-untyped-call", # In example for https://github.com/grpc/grpc/pull/37877
+  "no-untyped-def",  # In example for https://github.com/grpc/grpc/pull/37877
+]
 
 [tool.pyright]
 pythonVersion = "3.13"

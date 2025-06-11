@@ -30,6 +30,7 @@ sudo pacman -S --needed uv taplo
 
 ## Linters and Formatters
 
+- [Mypy](https://github.com/python/mypy) - Optional static typing for Python
 - [Pyright](https://github.com/microsoft/pyright) - Static Type Checker for Python
 - [Ruff](https://docs.astral.sh/ruff) - An extremely fast Python linter and code formatter, written in Rust
 
