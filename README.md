@@ -10,6 +10,8 @@
 - Better mypy rules
 - Dockerfile from <https://github.com/zsxoff/docker-python>
 - Copier template
+- SQL formatter
+- Security checks
 
 ---
 
