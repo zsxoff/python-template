@@ -4,6 +4,15 @@
 
 ---
 
+## To Do
+
+- Better ruff rules
+- Better mypy rules
+- Dockerfile from <https://github.com/zsxoff/docker-python>
+- Copier template
+
+---
+
 A typical template for Python projects. Has pretty strict linter settings.
 
 ## Tools setup
