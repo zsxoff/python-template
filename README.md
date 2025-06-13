@@ -20,16 +20,17 @@ copier copy https://github.com/zsxoff/python-template ~/projects/
 
 ## To Do
 
+- Better project name, module name, description rendering in Jinja2 templates
 - Better ruff rules
 - Better mypy rules
-- Dockerfile from <https://github.com/zsxoff/docker-python>
-- Copier template
+- Dockerfile from <https://github.com/zsxoff/docker-python> combined with uv multi-stage
 - SQL formatter
 - Security checks
 - Pylint
 - wemake-python-styleguide
 - Pyrefly
 - Code coverage
+- Profiling packages optional group
 
 ---
 
