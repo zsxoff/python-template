@@ -94,7 +94,8 @@ ignore = [
   "ANN003", # Missing type annotation for **{name}
 ]
 extend-select = [
-  "I", # isort
+  "I",  # isort
+  "UP", # pyupgrade
 ]
 
 [tool.ruff.lint.per-file-ignores]
