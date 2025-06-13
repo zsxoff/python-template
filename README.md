@@ -12,6 +12,12 @@
 
 A typical template for Python projects. Has pretty strict linter settings.
 
+## How to use this template
+
+```bash
+copier copy https://github.com/zsxoff/python-template ~/projects/
+```
+
 ## To Do
 
 - Better ruff rules
