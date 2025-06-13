@@ -7,6 +7,18 @@
 pre-commit:
   parallel: true
   jobs:
+    - name: ruff-format-isort
+      glob: "{*.py,*.pyi}"
+      run: ruff check --preview --force-exclude --select I --fix {staged_files}
+
+    - name: ruff-format-check
+      glob: "{*.py,*.pyi}"
+      run: ruff format --preview --force-exclude --check {staged_files}
+
+    - name: ruff-check
+      glob: "{*.py,*.pyi}"
+      run: ruff check --preview --force-exclude {staged_files}
+
     - name: bandit
       glob: "{*.py,*.pyi}"
       run: bandit -c pyproject.toml {staged_files}
@@ -40,6 +52,10 @@ pre-push:
     - name: pyright
       glob: "{*.py,*.pyi}"
       run: pyright .
+
+    - name: ruff-check
+      glob: "{*.py,*.pyi}"
+      run: ruff check --preview --force-exclude .
 
     - name: uv-lock-frozen
       glob: "{pyproject.toml,uv.lock}"
