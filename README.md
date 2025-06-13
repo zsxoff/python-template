@@ -10,6 +10,8 @@
 
 ---
 
+A typical template for Python projects. Has pretty strict linter settings.
+
 ## To Do
 
 - Better ruff rules
@@ -24,8 +26,6 @@
 - Code coverage
 
 ---
-
-A typical template for Python projects. Has pretty strict linter settings.
 
 ## Git configuration
 
@@ -54,3 +54,9 @@ A typical template for Python projects. Has pretty strict linter settings.
 
 - [EditorConfig](https://editorconfig.org/) - Maintains consistent coding styles across editors and IDEs
 - [Taplo](https://github.com/tamasfe/taplo) - A TOML toolkit written in Rust. In this template, it is used for `pyproject.toml`
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license (see [LICENSE](https://github.com/zsxoff/python-template/blob/main/LICENSE) file).
