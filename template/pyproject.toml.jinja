@@ -11,6 +11,7 @@ dev = [
   "bandit==1.8.6",
   "flake8==7.3.0",
   "flake8-pydantic==0.4.0",
+  "flake8-pyproject==1.2.3",
   "lefthook==1.12.3",
   "mypy[faster-cache]==1.17.1",
   "pyright==1.1.404",
@@ -29,6 +30,7 @@ exclude_dirs = [
   ".mypy_cache",   # tools
   ".pytest_cache", # tools
   ".ruff_cache",   # tools
+  "dist",          # dist
   "docs",          # docs
 ]
 
@@ -37,6 +39,19 @@ skips = ["*/*_test.py", "*/test_*.py", "./tests/conftest.py"]
 
 [tool.flake8]
 max-line-length = 120
+exclude = [
+  ".git",          # common env
+  ".idea",         # common env
+  ".venv",         # common env
+  ".vscode",       # common env
+  ".zed",          # common env
+  ".mypy_cache",   # tools
+  ".pytest_cache", # tools
+  ".ruff_cache",   # tools
+  "docs",          # docs
+  "dist",          # dist
+  "__pycache__",   # cache
+]
 
 [tool.mypy]
 strict = true
@@ -55,6 +70,7 @@ exclude = [
   "^.mypy_cache/",   # tools
   "^.pytest_cache/", # tools
   "^.ruff_cache/",   # tools
+  "^dist/",          # dist
   "^docs/",          # docs
 ]
 disable_error_code = [
@@ -81,6 +97,7 @@ extend-exclude = [
   ".vscode",       # common env
   ".zed",          # common env
   ".pytest_cache", # tools
+  "dist",          # dist
   "docs",          # docs
 ]
 
