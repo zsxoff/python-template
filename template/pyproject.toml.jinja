@@ -93,10 +93,14 @@ fix = false
 target-version = "py313"
 line-length = 120
 extend-exclude = [
+  ".git",          # common env
   ".idea",         # common env
+  ".venv",         # common env
   ".vscode",       # common env
   ".zed",          # common env
+  ".mypy_cache",   # tools
   ".pytest_cache", # tools
+  ".ruff_cache",   # tools
   "dist",          # dist
   "docs",          # docs
 ]
