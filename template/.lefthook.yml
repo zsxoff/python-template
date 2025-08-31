@@ -23,6 +23,10 @@ pre-commit:
       glob: "{*.py,*.pyi}"
       run: bandit -c pyproject.toml {staged_files}
 
+    - name: flake8
+      glob: "{*.py,*.pyi}"
+      run: flake8 {staged_files}
+
     - name: mypy
       glob: "{*.py,*.pyi}"
       run: mypy --config-file pyproject.toml {staged_files}
@@ -45,6 +49,10 @@ pre-commit:
 
 pre-push:
   jobs:
+    - name: flake8
+      glob: "{*.py,*.pyi}"
+      run: flake8 .
+
     - name: mypy
       glob: "{*.py,*.pyi}"
       run: mypy --config-file pyproject.toml .

@@ -9,6 +9,8 @@ dependencies = []
 [dependency-groups]
 dev = [
   "bandit==1.8.6",
+  "flake8==7.3.0",
+  "flake8-pydantic==0.4.0",
   "lefthook==1.12.3",
   "mypy[faster-cache]==1.17.1",
   "pyright==1.1.404",
@@ -32,6 +34,9 @@ exclude_dirs = [
 
 [tool.bandit.assert_used]
 skips = ["*/*_test.py", "*/test_*.py", "./tests/conftest.py"]
+
+[tool.flake8]
+max-line-length = 120
 
 [tool.mypy]
 strict = true
