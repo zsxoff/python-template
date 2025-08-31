@@ -9,4 +9,4 @@ pre-commit:
   jobs:
     - name: markdownlint
       glob: "{*.md,*.mdown,*.markdown}"
-      run: docker run -v $PWD:/workdir davidanson/markdownlint-cli2:v0.17.2 {staged_files}
+      run: docker run -v $PWD:/workdir davidanson/markdownlint-cli2:v0.18.1 {staged_files}
