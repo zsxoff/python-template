@@ -3,4 +3,4 @@
 
 def test_dummy() -> None:
     """Always assert True."""
-    assert True
+    assert 2 + 2 == 2 + 2
