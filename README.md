@@ -63,7 +63,7 @@ copier copy https://github.com/zsxoff/python-template ./my-project
 ## External tools configuration
 
 - [EditorConfig](https://editorconfig.org/) - Maintains consistent coding styles across editors and IDEs
-- [Taplo](https://github.com/tamasfe/taplo) - A TOML toolkit written in Rust. In this template, it is used for `pyproject.toml`
+- [Tombi](https://github.com/tombi-toml/tombi) - TOML Formatter / Linter / Language Server
 
 ## License
 
