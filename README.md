@@ -50,6 +50,7 @@ copier copy https://github.com/zsxoff/python-template ./my-project
 - [Mypy](https://github.com/python/mypy) - Optional static typing for Python
 - [Pyright](https://github.com/microsoft/pyright) - Static Type Checker for Python
 - [Ruff](https://docs.astral.sh/ruff) - An extremely fast Python linter and code formatter, written in Rust
+- [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide) - The strictest and most opinionated python linter ever!
 
 ## Security
 
