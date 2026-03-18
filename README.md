@@ -10,9 +10,7 @@
 
 ---
 
-A typical template for Python projects. Has pretty strict linter settings.
-
-## How to use this template
+## Apply this template
 
 ```bash
 copier copy https://github.com/zsxoff/python-template ./my-project
