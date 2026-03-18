@@ -28,7 +28,6 @@ copier copy https://github.com/zsxoff/python-template ./my-project
 - Security checks
 - Pylint
 - wemake-python-styleguide
-- Pyrefly
 - Code coverage
 - Profiling packages optional group
 
