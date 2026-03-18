@@ -45,7 +45,7 @@ copier copy https://github.com/zsxoff/python-template ./my-project
 ## Linters and Formatters
 
 - [Flake8](https://github.com/PyCQA/flake8) - Linting tool for Python code
-- [Flake8 Pydantic](https://github.com/Viicos/flake8-pydantic) - A flake8 plugin to check Pydantic related code
+- [Flake8-pydantic](https://github.com/Viicos/flake8-pydantic) - A flake8 plugin to check Pydantic related code
 - [Flake8-pyproject](https://github.com/john-hen/Flake8-pyproject) - Flake8 plug-in loading the configuration from pyproject.toml
 - [Mypy](https://github.com/python/mypy) - Optional static typing for Python
 - [Pyright](https://github.com/microsoft/pyright) - Static Type Checker for Python
