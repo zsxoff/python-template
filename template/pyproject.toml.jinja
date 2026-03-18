@@ -8,31 +8,26 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-  "bandit==1.9.2",
-  "flake8==7.3.0",
-  "flake8-pydantic==0.4.0",
-  "flake8-pyproject==1.2.4",
-  "lefthook==2.0.5",
-  "mypy[faster-cache]==1.19.0",
-  "pyright==1.1.407",
-  "pytest==9.0.1",
+  "mypy[faster-cache]==1.19.1",
+  "pyright==1.1.408",
   "pytest-sugar==1.1.1",
-  "ruff==0.14.7",
+  "pytest==9.0.1",
+  "ruff==0.15.6",
 ]
 
 [tool.bandit]
 exclude_dirs = [
-  ".git",          # common env
-  ".idea",         # common env
-  ".venv",         # common env
-  ".vscode",       # common env
-  ".zed",          # common env
-  ".mypy_cache",   # tools
-  ".pytest_cache", # tools
-  ".ruff_cache",   # tools
-  "dist",          # dist
-  "docs",          # docs
-  "__pycache__",   # cache
+  ".git",           # common env
+  ".idea",          # common env
+  ".venv",          # common env
+  ".vscode",        # common env
+  ".zed",           # common env
+  ".mypy_cache",    # tools
+  ".pytest_cache",  # tools
+  ".ruff_cache",    # tools
+  "dist",           # dist
+  "docs",           # docs
+  "__pycache__",    # cache
 ]
 
 [tool.bandit.assert_used]
@@ -41,17 +36,17 @@ skips = ["*/*_test.py", "*/test_*.py", "./tests/conftest.py"]
 [tool.flake8]
 max-line-length = 120
 exclude = [
-  ".git",          # common env
-  ".idea",         # common env
-  ".venv",         # common env
-  ".vscode",       # common env
-  ".zed",          # common env
-  ".mypy_cache",   # tools
-  ".pytest_cache", # tools
-  ".ruff_cache",   # tools
-  "dist",          # dist
-  "docs",          # docs
-  "__pycache__",   # cache
+  ".git",              # common env
+  ".idea",             # common env
+  ".venv",             # common env
+  ".vscode",           # common env
+  ".zed",              # common env
+  ".mypy_cache",       # tools
+  ".pytest_cache",     # tools
+  ".ruff_cache",       # tools
+  "dist",              # dist
+  "docs",              # docs
+  "__pycache__",       # cache
 ]
 
 [tool.mypy]
@@ -63,20 +58,20 @@ platform = "linux"
 local_partial_types = true
 warn_unreachable = true
 exclude = [
-  "^.git/",          # common env
-  "^.idea/",         # common env
-  "^.venv/",         # common env
-  "^.vscode/",       # common env
-  "^.zed/",          # common env
-  "^.mypy_cache/",   # tools
-  "^.pytest_cache/", # tools
-  "^.ruff_cache/",   # tools
-  "^dist/",          # dist
-  "^docs/",          # docs
+  "^.git/",                 # common env
+  "^.idea/",                # common env
+  "^.venv/",                # common env
+  "^.vscode/",              # common env
+  "^.zed/",                 # common env
+  "^.mypy_cache/",          # tools
+  "^.pytest_cache/",        # tools
+  "^.ruff_cache/",          # tools
+  "^dist/",                 # dist
+  "^docs/",                 # docs
 ]
 disable_error_code = [
-  "no-untyped-call", # In example for https://github.com/grpc/grpc/pull/37877
-  "no-untyped-def",  # In example for https://github.com/grpc/grpc/pull/37877
+  "no-untyped-call",        # In example for https://github.com/grpc/grpc/pull/37877
+  "no-untyped-def",         # In example for https://github.com/grpc/grpc/pull/37877
 ]
 
 [tool.pyright]
@@ -85,10 +80,10 @@ venvPath = "."
 pythonVersion = "3.13"
 pythonPlatform = "Linux"
 exclude = [
-  ".*",              # common env
-  ".venv",           # common env
-  "**/__pycache__",  # common env
-  "**/node_modules", # common env
+  ".*",                   # common env
+  ".venv",                # common env
+  "**/__pycache__",       # common env
+  "**/node_modules",      # common env
 ]
 
 [tool.ruff]
@@ -97,16 +92,16 @@ fix = false
 target-version = "py313"
 line-length = 120
 extend-exclude = [
-  ".git",          # common env
-  ".idea",         # common env
-  ".venv",         # common env
-  ".vscode",       # common env
-  ".zed",          # common env
-  ".mypy_cache",   # tools
-  ".pytest_cache", # tools
-  ".ruff_cache",   # tools
-  "dist",          # dist
-  "docs",          # docs
+  ".git",                 # common env
+  ".idea",                # common env
+  ".venv",                # common env
+  ".vscode",              # common env
+  ".zed",                 # common env
+  ".mypy_cache",          # tools
+  ".pytest_cache",        # tools
+  ".ruff_cache",          # tools
+  "dist",                 # dist
+  "docs",                 # docs
 ]
 
 [tool.ruff.format]
@@ -115,22 +110,22 @@ docstring-code-format = true
 
 [tool.ruff.lint]
 select = [
-  "F", # Pyflakes
-  "E", # pycodestyle - Error
-  "W", # pycodestyle - Warning
+  "F",             # Pyflakes
+  "E",             # pycodestyle - Error
+  "W",             # pycodestyle - Warning
 ]
 ignore = [
-  "ANN002", # Missing type annotation for *{name}
-  "ANN003", # Missing type annotation for **{name}
+  "ANN002",        # Missing type annotation for *{name}
+  "ANN003",        # Missing type annotation for **{name}
 ]
 extend-select = [
-  "I",  # isort
-  "UP", # pyupgrade
+  "I",             # isort
+  "UP",            # pyupgrade
 ]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*.py" = [
-  "S101", # Checks for uses of the assert keyword
+  "S101",         # Checks for uses of the assert keyword
 ]
 
 [tool.ruff.lint.isort]
