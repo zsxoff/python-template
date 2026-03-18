@@ -40,7 +40,7 @@ copier copy https://github.com/zsxoff/python-template ./my-project
 
 ## Git hooks
 
-- [Lefthook](https://github.com/evilmartians/lefthook) - A Git hooks manager for Node.js, Ruby, Python and many other types of projects
+- [prek](https://github.com/j178/prek) - ⚡ Better `pre-commit`, re-engineered in Rust
 
 ## Linters and Formatters
 
