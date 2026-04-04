@@ -109,16 +109,15 @@ quote-style = "double"
 docstring-code-format = true
 
 [tool.ruff.lint]
-select = [
-  "F",             # Pyflakes
-  "E",             # pycodestyle - Error
-  "W",             # pycodestyle - Warning
-]
+select = []
 ignore = [
   "ANN002",        # Missing type annotation for *{name}
   "ANN003",        # Missing type annotation for **{name}
 ]
 extend-select = [
+  "F",             # Pyflakes
+  "E",             # pycodestyle - Error
+  "W",             # pycodestyle - Warning
   "I",             # isort
   "UP",            # pyupgrade
 ]
