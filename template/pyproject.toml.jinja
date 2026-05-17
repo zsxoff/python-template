@@ -38,7 +38,7 @@ exclude_dirs = [
 skips = ["*/*_test.py", "*/test_*.py", "./tests/conftest.py"]
 
 [tool.flake8]
-max-line-length = 120
+max-line-length = {{ line_length }}
 exclude = [
   ".git",              # common env
   ".idea",             # common env
@@ -102,7 +102,7 @@ exclude = [
 preview = true
 fix = false
 target-version = "py313"
-line-length = 120
+line-length = {{ line_length }}
 extend-exclude = [
   ".git",                 # common env
   ".idea",                # common env
@@ -149,8 +149,8 @@ known-third-party = []
 max-complexity = 6
 
 [tool.ruff.lint.pycodestyle]
-max-doc-length = 120
-max-line-length = 120
+max-doc-length = {{ line_length }}
+max-line-length = {{ line_length }}
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
