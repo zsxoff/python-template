@@ -68,6 +68,14 @@ disable_error_code = [
   "no-untyped-def",         # In example for https://github.com/grpc/grpc/pull/37877
 ]
 
+[tool.pydoctor]
+add-package = ["src/{{ module_name }}"]
+docformat = "google"
+html-output = "build/apidocs"
+project-name = "{{ project_name }}"
+sidebar-expand-depth = 2
+warnings-as-errors = true
+
 [tool.pyright]
 venv = ".venv"
 venvPath = "."
