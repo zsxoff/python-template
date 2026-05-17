@@ -7,7 +7,17 @@ requires-python = ">=3.13"
 dependencies = []
 
 [dependency-groups]
-dev = ["mypy[faster-cache]==2.1.0", "pytest==9.0.3", "pytest-sugar==1.1.1"]
+dev = [
+  { include-group = "lint" },
+  { include-group = "test" },
+]
+lint = [
+  "mypy[faster-cache]==2.1.0",
+]
+test = [
+  "pytest==9.0.3",
+  "pytest-sugar==1.1.1",
+]
 
 [tool.bandit]
 exclude_dirs = [
