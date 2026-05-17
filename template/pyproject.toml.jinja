@@ -69,7 +69,7 @@ disable_error_code = [
 ]
 
 [tool.pydoctor]
-add-package = ["src/{{ module_name }}"]
+add-package = ["{{ module_name }}"]
 docformat = "google"
 html-output = "build/apidocs"
 project-name = "{{ project_name }}"
@@ -132,7 +132,7 @@ extend-select = [
 [tool.ruff.lint.isort]
 lines-after-imports = 2
 lines-between-types = 0
-known-first-party = ["src"]
+known-first-party = ["{{ module_name }}"]
 known-third-party = []
 
 [tool.ruff.lint.mccabe]
