@@ -8,7 +8,7 @@ default_install_hook_types = [
   "pre-push",
   "post-checkout",
   "post-merge",
-  "post-rewrite"
+  "post-rewrite",
 ]
 
 [[repos]]
@@ -35,28 +35,42 @@ rev = "v6.0.0"
 hooks = [
   {
     id = "check-ast",
-    additional_dependencies = ["--index-url=https://pypi.org/simple"],
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+    ],
   },
   {
     id = "name-tests-test",
-    args = ["--pytest-test-first"],
-    additional_dependencies = ["--index-url=https://pypi.org/simple"]
+    args = [
+      "--pytest-test-first",
+    ],
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+    ],
   }
 ]
 
 [[repos]]
 repo = "https://github.com/astral-sh/ruff-pre-commit"
-rev = "v0.15.13"
+rev = "v0.17.4"
 hooks = [
   {
     id = "ruff-check",
-    args = ["--exit-non-zero-on-fix"],
-    additional_dependencies = ["--index-url=https://pypi.org/simple"]
+    args = [
+      "--exit-non-zero-on-fix",
+    ],
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+    ],
   },
   {
     id = "ruff-format",
-    args = ["--exit-non-zero-on-format"],
-    additional_dependencies = ["--index-url=https://pypi.org/simple"]
+    args = [
+      "--exit-non-zero-on-format",
+    ],
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+    ],
   }
 ]
 
@@ -69,14 +83,14 @@ hooks = [
     args = ["-c", "pyproject.toml"],
     additional_dependencies = [
       "--index-url=https://pypi.org/simple",
-      "bandit[toml]"
-    ]
+      "bandit[toml]",
+    ],
   }
 ]
 
 [[repos]]
 repo = "https://github.com/PyCQA/flake8"
-rev = "7.3.0"
+rev = "7.5.0"
 hooks = [
   {
     id = "flake8",
@@ -84,53 +98,66 @@ hooks = [
       "--index-url=https://pypi.org/simple",
       "flake8-pydantic",
       "flake8-pyproject",
-      "wemake-python-styleguide"
-    ]
+      "wemake-python-styleguide",
+    ],
   }
 ]
 
 [[repos]]
 repo = "https://github.com/RobertCraigie/pyright-python"
-rev = "v1.1.409"
+rev = "v1.1.414"
 hooks = [
   {
     id = "pyright",
-    additional_dependencies = ["--index-url=https://pypi.org/simple", "nodejs"]
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+      "nodejs",
+    ],
   }
 ]
 
 [[repos]]
 repo = "https://github.com/astral-sh/uv-pre-commit"
-rev = "0.11.14"
+rev = "0.13.7"
 hooks = [
   {
     id = "uv-lock",
-    additional_dependencies = ["--index-url=https://pypi.org/simple"]
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+    ],
   },
   {
     id = "uv-sync",
-    additional_dependencies = ["--index-url=https://pypi.org/simple"]
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+    ],
   }
 ]
 
 [[repos]]
 repo = "https://github.com/tombi-toml/tombi-pre-commit"
-rev = "v0.11.5"
+rev = "v1.11.2"
 hooks = [
   {
     id = "tombi-format",
-    additional_dependencies = ["--index-url=https://pypi.org/simple"]
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+    ],
   },
   {
     id = "tombi-lint",
-    additional_dependencies = ["--index-url=https://pypi.org/simple"]
+    additional_dependencies = [
+      "--index-url=https://pypi.org/simple",
+    ],
   }
 ]
 
 [[repos]]
 repo = "https://github.com/gitleaks/gitleaks"
 rev = "v8.30.1"
-hooks = [{ id = "gitleaks" }]
+hooks = [
+  { id = "gitleaks" },
+]
 
 [[repos]]
 repo = "local"
@@ -143,6 +170,6 @@ hooks = [
     types_or = ["python", "pyi"],
     require_serial = true,
     args = ["--config-file", "pyproject.toml"],
-    stages = ["pre-commit", "pre-push", "manual"]
+    stages = ["pre-commit", "pre-push", "manual"],
   }
 ]
